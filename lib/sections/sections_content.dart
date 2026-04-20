@@ -35,25 +35,28 @@ class _SectionsContentState extends State<SectionsContent> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white70,
-        title: const Text('Check Daily'),
+        backgroundColor: const Color.fromARGB(255, 212, 211, 211),
+        title: const Text(
+          'Check Daily',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
-      body: Center(child: _buildContent()),
-      backgroundColor: const Color.fromARGB(255, 91, 90, 90),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: (index) {
+      body: _buildContent(),
+      backgroundColor: const Color.fromARGB(81, 12, 11, 11),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: _selectedIndex,
+        onDestinationSelected: (index) {
           setState(() {
             _selectedIndex = index;
           });
         },
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.check), label: 'Activities'),
-          BottomNavigationBarItem(icon: Icon(Icons.folder), label: 'Projects'),
-          BottomNavigationBarItem(icon: Icon(Icons.task), label: 'Tasks'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+        backgroundColor: const Color.fromARGB(255, 212, 211, 211),
+        destinations: const [
+          NavigationDestination(icon: Icon(Icons.check), label: 'Activities'),
+          NavigationDestination(icon: Icon(Icons.folder), label: 'Projects'),
+          NavigationDestination(icon: Icon(Icons.task), label: 'Tasks'),
+          NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
         ],
-        backgroundColor: const Color.fromARGB(118, 19, 19, 19),
       ),
     );
   }

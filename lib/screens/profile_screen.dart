@@ -1,15 +1,11 @@
+import 'package:app_check_daily/widgets/profile.dart';
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
-  @override
-  _ProfileScreenState createState() => _ProfileScreenState();
-}
-
-class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Column(children: [Expanded(child: Profile())]);
   }
 }

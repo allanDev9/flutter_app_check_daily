@@ -1,3 +1,4 @@
+import 'package:app_check_daily/widgets/projects.dart';
 import 'package:flutter/material.dart';
 
 class ProjectsScreen extends StatelessWidget {
@@ -5,12 +6,6 @@ class ProjectsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        SizedBox(height: 12),
-        Text('Projects', style: TextStyle(fontSize: 24, color: Colors.white)),
-      ],
-    );
+    return const Column(children: [Expanded(child: Projects())]);
   }
 }

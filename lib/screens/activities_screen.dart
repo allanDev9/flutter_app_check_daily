@@ -1,3 +1,4 @@
+import 'package:app_check_daily/widgets/activities.dart';
 import 'package:flutter/material.dart';
 
 class ActivitiesScreen extends StatelessWidget {
@@ -5,11 +6,10 @@ class ActivitiesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      mainAxisSize: MainAxisSize.min,
+    return Column(
       children: [
-        SizedBox(height: 12),
-        Text(
+        const SizedBox(height: 22),
+        const Text(
           'Activities',
           style: TextStyle(
             fontSize: 24,
@@ -17,10 +17,8 @@ class ActivitiesScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        Text(
-          'No activities available',
-          style: TextStyle(fontSize: 14, color: Colors.white70),
-        ),
+        const SizedBox(height: 22),
+        const Expanded(child: Activities()),
       ],
     );
   }
