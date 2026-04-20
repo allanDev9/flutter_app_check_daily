@@ -17,24 +17,27 @@ class Projects extends StatelessWidget {
               color: const Color.fromARGB(255, 41, 40, 40),
               borderRadius: BorderRadius.circular(16),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Project $index',
-                  style: const TextStyle(
-                    fontSize: 18,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Project $index',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 12),
-                const Text(
-                  'Lorem ipsum dolor sit amet, consectetur \n'
-                  'adipiscing elit. Donec vel sapien eget nunc efficitur.',
-                  style: TextStyle(fontSize: 14, color: Colors.white70),
-                ),
-              ],
+                  const SizedBox(height: 12),
+                  const Text(
+                    'Lorem ipsum dolor sit amet, consectetur \n'
+                    'adipiscing elit. Donec vel sapien eget nunc efficitur.',
+                    style: TextStyle(fontSize: 14, color: Colors.white70),
+                  ),
+                ],
+              ),
             ),
           ),
         );
